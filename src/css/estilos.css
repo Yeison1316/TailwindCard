@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -191,6 +191,10 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
   font-size: 100%;
   /* 1 */
   font-weight: inherit;
@@ -338,6 +342,14 @@ ul,
 menu {
   list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
   padding: 0;
 }
 
@@ -560,12 +572,12 @@ video {
   aspect-ratio: 1 / 1;
 }
 
-.w-\[90\%\] {
-  width: 90%;
-}
-
 .w-36 {
   width: 9rem;
+}
+
+.w-\[90\%\] {
+  width: 90%;
 }
 
 .max-w-md {
@@ -597,19 +609,22 @@ video {
   border-bottom-left-radius: 1rem;
 }
 
+.bg-cobalt-blue\/5 {
+  background-color: hsl(234 85% 45% / 0.05);
+}
+
+.bg-dark-gray-blue {
+  --tw-bg-opacity: 1;
+  background-color: hsl(224 30% 27% / var(--tw-bg-opacity));
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-light-red {
-  --tw-bg-opacity: 1;
-  background-color: hsl(0 100% 67% / var(--tw-bg-opacity));
+.bg-green-teal\/5 {
+  background-color: hsl(166 100% 37% / 0.05);
 }
 
 .bg-light-red\/5 {
@@ -620,17 +635,9 @@ video {
   background-color: hsl(39 100% 56% / 0.05);
 }
 
-.bg-green-teal\/5 {
-  background-color: hsl(166 100% 37% / 0.05);
-}
-
-.bg-cobalt-blue\/5 {
-  background-color: hsl(234 85% 45% / 0.05);
-}
-
-.bg-dark-gray-blue {
+.bg-white {
   --tw-bg-opacity: 1;
-  background-color: hsl(224 30% 27% / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-b {
@@ -661,29 +668,19 @@ video {
   padding: 2.5rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .text-center {
@@ -694,9 +691,9 @@ video {
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-5xl {
@@ -704,13 +701,13 @@ video {
   line-height: 1;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-lg {
   font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -718,9 +715,23 @@ video {
   font-weight: 700;
 }
 
-.text-white {
+.text-cobalt-blue {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: hsl(234 85% 45% / var(--tw-text-opacity));
+}
+
+.text-dark-gray-blue {
+  --tw-text-opacity: 1;
+  color: hsl(224 30% 27% / var(--tw-text-opacity));
+}
+
+.text-dark-gray-blue\/70 {
+  color: hsl(224 30% 27% / 0.7);
+}
+
+.text-green-teal {
+  --tw-text-opacity: 1;
+  color: hsl(166 100% 37% / var(--tw-text-opacity));
 }
 
 .text-light-lavender {
@@ -733,34 +744,14 @@ video {
   color: hsl(0 100% 67% / var(--tw-text-opacity));
 }
 
-.text-dark-gray-blue {
-  --tw-text-opacity: 1;
-  color: hsl(224 30% 27% / var(--tw-text-opacity));
-}
-
-.text-dark-gray-blue\/70 {
-  color: hsl(224 30% 27% / 0.7);
-}
-
 .text-orangey-yellow {
   --tw-text-opacity: 1;
   color: hsl(39 100% 56% / var(--tw-text-opacity));
 }
 
-.text-green-teal {
+.text-white {
   --tw-text-opacity: 1;
-  color: hsl(166 100% 37% / var(--tw-text-opacity));
-}
-
-.text-cobalt-blue {
-  --tw-text-opacity: 1;
-  color: hsl(234 85% 45% / var(--tw-text-opacity));
-}
-
-.shadow-xl {
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .shadow-2xl {
